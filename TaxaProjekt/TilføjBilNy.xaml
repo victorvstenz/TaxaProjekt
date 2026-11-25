@@ -1,0 +1,19 @@
+﻿<Page x:Class="TaxaProjekt.TilføjBilNy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaxaProjekt"
+        mc:Ignorable="d"
+        Title="TilføjBilNy" Height="450" Width="800" Background="White">
+    <Grid>
+        <Label Content="Tilføj en bil" HorizontalAlignment="Right" Margin="0,64,230,0" VerticalAlignment="Top" Height="60" Width="260" FontSize="30"/>
+        <TextBox x:Name="TextBoxTilBilNavn" HorizontalAlignment="Center" Margin="0,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBoxTilBilÅrgang" HorizontalAlignment="Center" Margin="0,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Navn" HorizontalAlignment="Left" Margin="297,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="Årgang" HorizontalAlignment="Left" Margin="285,198,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTilBilMærke" HorizontalAlignment="Center" Margin="0,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mærke" HorizontalAlignment="Left" Margin="285,245,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonTilføjBil" Content="Tilføj bil" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top" Height="32" Width="120" Click="ButtonTilføjBil_Click"/>
+    </Grid>
+</Page>

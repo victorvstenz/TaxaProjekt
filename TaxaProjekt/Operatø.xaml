@@ -1,0 +1,19 @@
+﻿<Page x:Class="TaxaProjekt.Operatø"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaxaProjekt"
+        mc:Ignorable="d"
+        Title="Operatø" Height="450" Width="800" Background="White">
+    <Grid>
+        <Button x:Name="ButtonOpretChauffør" Content="Opret Chauffør" HorizontalAlignment="Left" Margin="597,350,0,0" VerticalAlignment="Top" Width="164" Click="ButtonOpretKonto_Click" Height="43"/>
+        <ListBox x:Name="ListBoxStatus" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,541,253"/>
+        <ListBox x:Name="ListBoxAlleChaufførTid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,225,541,44" SelectionChanged="ListBoxAlleChaufførTid_SelectionChanged"/>
+        <Button x:Name="ButtonSletChauffør" Content="Slet Chauffør" HorizontalAlignment="Left" Margin="430,350,0,0" VerticalAlignment="Top" Height="43" Width="162" Click="ButtonSletChauffør_Click"/>
+        <Button x:Name="ButtonTilføjBil" Content="Tilføj Bil" HorizontalAlignment="Left" Margin="430,292,0,0" VerticalAlignment="Top" Height="47" Width="162" Click="ButtonTilføjBil_Click"/>
+        <ListBox x:Name="ListBoxBilAktivitet" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="541,0,0,253"/>
+        <ListBox x:Name="ListBoxBestillinger" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="304,28,304,281"/>
+        <Button x:Name="ButtonTilegnOrdre" Content="Tilegn Ordre" HorizontalAlignment="Left" Margin="597,292,0,0" VerticalAlignment="Top" Height="47" Width="164" Click="ButtonTilegnOrdre_Click"/>
+    </Grid>
+</Page>
