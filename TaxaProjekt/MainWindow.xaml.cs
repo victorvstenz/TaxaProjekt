@@ -24,6 +24,7 @@ namespace TaxaProjekt
             database.LoadChauffør();
             database.UploadOperatør();
             database.LoadBestilling();
+            database.LoadBiler();
 
             taxasystem = new TaxaSystem();
 

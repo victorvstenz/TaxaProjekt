@@ -27,15 +27,26 @@ namespace TaxaProjekt
             taxasystem = mainwindow.taxasystem;
             ListBoxStatus1.Items.Add(mainwindow.taxasystem.chauffør);
             ListBoxBilAktivitet1.ItemsSource = mainwindow.taxasystem.database.billiste;
+            if(mainwindow.taxasystem.chauffør.bestilling != null)
+            {
+                ListBoxAktivOrdre.Items.Add(mainwindow.taxasystem.chauffør.bestilling);
+            }
+            else
+            {
+                MessageBox.Show("Chaufføren har ikke en bestilling");
+            }
             ListBoxBilAktivitet1.Items.Refresh();
-            ListBoxAktivOrdre.ItemsSource = mainwindow.taxasystem.database.chaufførliste;
-            ListBoxAktivOrdre.Items.Add(mainwindow.taxasystem.chauffør.bestilling);
-            ListBoxAktivOrdre.Items.Refresh();
             if (mainwindow.taxasystem.chauffør.PåArbejde == true)
             {
                 ButtonAktivInaktiv.Content = "Check ud";
             }
-            ComboBoxVælgBil.ItemsSource = mainwindow.database.billiste;
+            foreach(Biler bil in mainwindow.database.billiste)
+            {
+                if(bil.Aktivitet != "Optaget")
+                {
+                    ComboBoxVælgBil.Items.Add(bil);
+                }
+            }
             ComboBoxVælgBil.DisplayMemberPath = "Navn"; // Viser kun bilens navn.
             ListBoxBilValgt.DisplayMemberPath = "Navn"; // Viser kun bilens navn.
         }

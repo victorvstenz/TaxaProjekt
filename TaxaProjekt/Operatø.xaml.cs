@@ -77,6 +77,7 @@ namespace TaxaProjekt
             valgtchauffør.bestilling = valgtbestilling;
             mainwindow.database.GemChauffør();
             mainwindow.database.GemBestilling();
+            MessageBox.Show($"Ordre: {valgtbestilling.Navn} tilegnet: {valgtchauffør.Navn}");
         }
     }
 }
